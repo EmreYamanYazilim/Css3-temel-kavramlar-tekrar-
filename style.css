@@ -1,0 +1,87 @@
+/*ctrl space yaptığımızda bize yardımcı olabilicek öneriler çıkabiliyor*/
+h1 {
+    color: yellow;
+    background-color: green;
+
+}
+
+body {
+    background-color: white;
+}
+
+div {
+    color: blue; /*renk vermek için */
+    border: 1px solid red; /* solid  düz çizgi olarak divin etrafını sarar*/
+    border: 1px dotted black; /* dotted sık kesik çizgi olarak divin etrafını sarar*/
+    border: 1px dashed green; /* dashed arası açık kesik çizgi divin etrafını sarar*/
+    margin-top: 100px; /* yukarıdan aşağı doğru 100px bir boşluk bırakır*/
+    margin-left: 100px; /* soldan 100px boşluk bırakmak */
+    margin-right: 100px; /* sağdan boşluk*/
+    margin-bottom: 100px; /* alttan 100px boşluk*/
+    background-color: white; /* arka plan rengi*/
+    /*MARGİN DIŞ BOŞLUK  PADDİNG İÇ BOŞLUKTUR   MARGİN İLE  BODY İLE DİV ARASINDA BİR BOŞLUK BIRAKABİLİRKEN PADDİNG İLE YAZI İLE DİV ARASINDAKİ BOŞLUĞU DEĞİŞTİRİZ*/
+    padding: 25px; /* iç boşluk olarak  div içindeki yazıları dive sıfır olmak yerine 25 px boşluk bırakarak yazar */
+    padding-bottom: 10px; /* iç taraftan 10px boşluk yapar*/
+
+
+}
+
+/* tek tekte yazabilirz iç içe olanları virgülle ayırarak  yan yanada yazabilirz*/
+table,th,td{
+    border: 1px solid green;
+}
+table{
+    border-collapse: collapse;  /*  tablolarda iç içe girmiş iki çizgi yerine tek çizgi yaparak güzel görnümüm yapar */
+    width: 100%;  /* sayfa genişliğinde tabloyu büyütür */
+}
+th,td {
+    height: 30px; /*uzunluk*/
+    vertical-align: center; /* metinleri tabloda ortalar  top yukarı çeker bottom aşağı çeker*/
+    text-align: center; /* metinleri ortalar align left sola right sağa */
+    padding-left: 10px; /* padding iç boşluk olduğu için tablo içinden  soldan 10px boşluk verir */
+}
+/*  Hover ile  üzerine geldiğinde değişkenlik gösterir*/
+tr:hover{
+    background-color: green;
+}
+/* nth child  even yazınca oluşturlan  tabloda tekhaneli olan rengi  kırmızı olsun dedik  odd yazarsak çift haneli olanların rengi mavi yaptık  ne kadar tabloyaparsak
+kırmızı mavi kırmızı mavi diye devam eder */
+tr:nth-child(even) {
+    background-color: red;
+}
+tr:nth-child(odd) {
+    background-color: blue;
+}
+
+/* input içine köşeli parantezle  hangi tipin buraya dahil olup almaayacağını ekleyebiliyoruz */
+input[type=text],[type=password] {
+    width: 100%; /* text alanını sayfanın tamamına uzatır */
+    padding: 10px; /* iç boşluk*/
+    border: 1px solid green;
+    border-radius: 10px; /* köşeleri yuvarlamaya yarar*/
+    border-bottom: 2px solid red; /* sadece alt tarafa kırmızı yap dedik*/
+    color: red; /* yazı rengi değiştirme */
+    background-color: grey;  /* arka plan rengi*/
+
+}
+/* focus özelliği  text alalına tıkladığımızda rengirni yada işlevini değiştirmeye yarar tıklayına arka plan rengi beyaza dönecek */
+input[type=text]:focus,[type=password]:focus {
+    background-color: white;
+}
+
+/* noktadan yararlanarak başına nokta koyarak  class oluşturma   div p  label vb içine class="" yazarak içine  css'ten yaptığımız klası eklersek o classta  ne değişiklik yaparsak onu uygular */
+
+.DenemeClass{
+    color: red;
+    font-size: 30px;
+}
+
+/* p.denemeclass dersek  sadece p ler için geçerli bir class anlamına gelir  p den başka bir yere verince çalışmaz */
+
+
+
+/* Css'te  İD verme  id değeri uniq olarak sadece ona verilir  diyes'ten yararlanıyoruz  */
+#DenemeId{
+    color: darkorange;
+    background-color: aqua;
+}
